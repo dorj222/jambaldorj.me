@@ -1,3 +1,117 @@
-body{
-    background-color: azure;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root{
+    --primary-color: #273746;
+    --secondary-color: #34c26f;
 }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+body.show-nav{
+    transform: translateX(400px);
+ }
+
+
+nav{
+    background-color: var(--primary-color);
+    border-right: 2px solid rgba(200, 200,200, 0.1);
+    color: white;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+nav .img-profile{
+    padding: 30px 0;
+    text-align: center;
+}
+
+nav .img-profile img{
+    height: 275px;
+    width: auto;
+    border-radius: 50%;
+}
+
+nav ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li{
+    border-bottom: 2px solid rgba(200,200,200, 0.1);
+    padding: 20px;
+}
+
+nav ul li:first-of-type{
+    border-bottom: 2px solid rgba(200,200,200, 0.1);
+    padding: 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+header{
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+header h1{
+    margin: 0;
+}
+
+header p {
+    margin: 30px 0;
+}
+
+button{
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 12px;
+}
+
+button:focus{
+    outline: none;
+}
+
+.toggle{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.container{
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
