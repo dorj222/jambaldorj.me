@@ -7,6 +7,8 @@
 
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body{
@@ -15,19 +17,26 @@ body{
     transition: transform 0.3s ease;
 }
 
+/* Container */
+.container{
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
 /* Header */
 
 header{
     background-color: var(--primary-color);
     color: white;
     font-size: 130%;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
     display: flex;
-    height: 100vh;
 }
 
 
@@ -41,12 +50,13 @@ header{
     margin: 0 auto;
     transform: translateY(-50%);
     border-right: 2px solid black;
-    text-align: center;
-    display: block;
 }
 
+a{
+    text-decoration: none;
+}
 
-.selectBtn{
+header .anchorLinks{
     font-family: "Lato", sans-serif;;
     font-size: 40px;
     font-weight: 400;
@@ -55,19 +65,6 @@ header{
     color: rgba(255,255,255,0.5);
 }
 
-a{
-    text-decoration: none;
-}
-
-
-button{
-    background-color: transparent;
-    border: 0;
-    border-radius: 5px;
-    color: rgba(255, 255, 255,0.5);
-    cursor: pointer;
-    padding: 5px 12px;
-}
 
 .buttonHover{
     color: white;
@@ -77,38 +74,33 @@ button:focus{
     outline: none;
 }
 
-
-/* Container */
-.container{
-    margin: 0 auto;
-    max-width: 100%;
-    height: 100vh;
+.about{
     background-color: #ADEFD1FF;
 }
 
-.img-profile{
-    display: block;
-    text-align: center;
-}
+
 
 #my-photo{
     padding:3px;
     margin: 80px;
-    height: 275px;
-    width: o auto;
+    height: 27%;
+    width: 0 auto;
     border: 5px dashed var(--primary-color);
     border-radius: 50%;
+    overflow: auto;
 }
 
 .container-text{
-    text-align: center;
+    text-align: start;
     word-wrap: break-word;
     width: 500px;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
 
 .container-text p{
+    width: 0 auto;
     display: block;
     text-align: center;
     font-size: 30px;
@@ -116,11 +108,8 @@ button:focus{
 }
 
 
-.container-projects{
+.projects{
     background-color: white;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 100vh;
 }
 
 .selectedProjects{
@@ -135,10 +124,17 @@ button:focus{
 
 
 
+
+
+
+
+
+
+
 /* Animation */
 
 .anim-typewriter{
-    animation: typewriter 2s steps(40) 1s 1 normal both,
+    animation: typewriter 2s steps(40) 1s 0.3 normal both,
     blinkTextCursor 500ms steps(40) infinite normal;
 }
 
@@ -159,4 +155,27 @@ button:focus{
     to {
         border-right-color:transparent;
     }
+}
+
+
+
+@media only screen and (max-width: 768px){
+
+    #my-photo{
+        height: 25% important!;
+        width: 0 auto;
+        border: 2px dashed var(--primary-color);
+        border-radius: 50%;
+        vertical-align: top;
+    }
+    .container-text p{
+        width: 0 auto;
+        display: block;
+        text-align: center;
+        word-wrap: break-word;
+        font-size: 14px;
+    }
+
+
+
 }
