@@ -110,6 +110,8 @@ button:focus{
 
 .projects{
     background-color: #00203FFF;
+    min-height: 100vh;
+    overflow: auto;
     font-family: "Lato", sans-serif;
     margin: 0 auto;
     display: block;
@@ -122,28 +124,77 @@ h1{
     font-size: 60px;
     color: whitesmoke;
     text-align: center;
-    padding-top: 130px;
+    padding-top: 100px;
     position: relative;
 }
 
 .project-img{
-    margin-top: 150px;
-    margin-left: 40px;
-    height: 250px;
+    height: 350px;
+    border-top: none;
+    padding-top: 0;
     width: auto;
 }
 
 .container-images{
+    margin-top: 100px;
+    margin-left: 40px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
     text-align: center;
-    
 }
 
 .caption{
     color: whitesmoke;
     font-size: 22px;
+    caption-side: top;
+    display: table-caption;
+    margin-bottom: 10px;
+}
+
+figure{
+   border-top: none;
+    display: table;
+    margin-left: 80px;
+}
+
+.description p{
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    width: 350px;
+
+}
+
+#project-1{
+    float: left;
+}
+
+#project-2{
+    float: left;
+    align-self: stretch;
+}
+
+#project-3{
+    float: left;
+}
+
+/* Contact me */
+
+#contact-me{
+    font-size: 40px;
+}
+
+.contact-links{
+
+    font-size: 60px;
+    color:rgba(255,255,255,0.5);
+    margin-left: 20px;
+}
+
+.contact-me{
+    margin-bottom: 50px;
 }
 
 
