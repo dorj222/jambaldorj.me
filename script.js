@@ -1,7 +1,7 @@
 
-buttons = document.getElementsByClassName('selectBtn');
+buttons = document.querySelectorAll('a');
 
-
+images = document.getElementsByClassName('project-img');
 
 //Hover effect
 
@@ -15,3 +15,13 @@ for (let i = 0; i < buttons.length; i++) {
 
 }
            
+
+for (let i = 0; i < buttons.length; i++) {
+
+    images[i].addEventListener("mouseover", function(){ 
+
+     //
+
+    })
+
+}
