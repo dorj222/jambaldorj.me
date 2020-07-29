@@ -164,7 +164,6 @@ figure{
     font-size: 18px;
     color: white;
     width: 350px;
-
 }
 
 #project-1{
@@ -230,17 +229,73 @@ figure{
 
     #my-photo{
         height: 25% important!;
-        width: 0 auto;
+        width: auto;
         border: 2px dashed var(--primary-color);
         border-radius: 50%;
         vertical-align: top;
     }
     .container-text p{
-        width: 0 auto;
+        width: auto;
         display: block;
         text-align: center;
         word-wrap: break-word;
         font-size: 14px;
     }
+
+    .container-images img{
+        height: 190px;
+        width: auto;
+    }
+    .projects h1{
+        font-size: 27px;
+        color: whitesmoke;
+        text-align: center;
+        padding-top: 50px;
+        position: relative;
+    }
+
+    .projects  p{
+        font-size: 14px;
+        color: whitesmoke;
+        display: block;
+        text-align: left;
+        width: fit-content;
+        margin-top: 15px;
+    }
+
+    .projects .caption{
+        font-size: 20px;
+        color: rgb(187, 187, 187);
+    }
+
+    .container-images{
+        margin-top: 50px;
+        display: block;
+        margin-left: none;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .contact-links{
+        font-size: 40px;
+    }
+
+    figure{
+        margin-bottom: 50px;
+    }
+
+ 
+
+figure{
+    border-top: none;
+     display: table;
+     margin-left: 0px;
+ }
+
+ .contact-me{
+    margin-bottom: 10px;
+}
+   
+    
 
 }
