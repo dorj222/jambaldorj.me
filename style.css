@@ -160,6 +160,7 @@ figure{
 }
 
 .description p{
+    line-height: 2em;
     text-align: left;
     font-size: 18px;
     color: white;
