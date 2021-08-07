@@ -110,7 +110,7 @@ button:focus{
 
 .projects{
     background-color: #00203FFF;
-    min-height: 100vh;
+    min-height: 120vh;
     overflow: auto;
     font-family: "Lato", sans-serif;
     margin: 0 auto;
@@ -118,72 +118,120 @@ button:focus{
     text-align: center;
 }
 
+.contact{
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    display: block;
+    text-align: center;
+    height: 40vh !important;
+    background-color: rgb(0, 54, 63);
+}
+
 
 
 h1{
-    font-size: 60px;
+    font-size: 50px;
     color: whitesmoke;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 60px;
     position: relative;
 }
 
-.project-img{
-    height: 350px;
-    border-top: none;
-    padding-top: 0;
-    width: auto;
-}
 
-.container-images{
-    margin-top: 100px;
-    margin-left: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
+/* new projects */
+.grid {
+    display: grid;
+    height: 100;
+    place-self: center;
+    margin-left: 200px;
+    margin-top: 50px;
+    width: 15rem;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
+    align-items: start;
+  }
+  
+  .grid-item {
+    
+    background-color: #F2F3F4;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-img {
+    border-bottom: 3px solid black;
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-header {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    color: #3d3d3d;
+    margin-bottom: 1rem;
+  }
+  
+  .card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1.5rem;
     text-align: center;
-}
+    color: #3363ff;
+    background-color: #d8e0fd;
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+  }
+  
+  .card-btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+  }
+  
+  .card-btn:hover,
+  .card-btn:active {
+    background-color: #c2cffc;
+  }
+  
+  .card-btn:hover span,
+  .card-btn:active span {
+    margin-left: 1.5rem;
+  }
+  
 
-.caption{
-    color: whitesmoke;
-    font-size: 22px;
-    caption-side: top;
-    display: table-caption;
-    margin-bottom: 10px;
-}
 
-figure{
-   border-top: none;
-    display: table;
-    margin-left: 80px;
-}
-
-.description p{
-    line-height: 2em;
-    text-align: left;
-    font-size: 18px;
-    color: white;
-    width: 350px;
-}
-
-#project-1{
-    float: left;
-}
-
-#project-2{
-    float: left;
-    align-self: stretch;
-}
-
-#project-3{
-    float: left;
-}
 
 /* Contact me */
 
 #contact-me{
-    font-size: 40px;
+
+    font-size: 50px;
+    margin-bottom: 0px;
 }
 
 .contact-links{
@@ -191,11 +239,13 @@ figure{
     font-size: 60px;
     color:rgba(255,255,255,0.5);
     margin-left: 20px;
+    margin-bottom: 0px;
 }
 
 .contact-me{
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
+
 
 
 /* Animation */
@@ -248,10 +298,10 @@ figure{
         width: auto;
     }
     .projects h1{
-        font-size: 27px;
+        font-size: 24px;
         color: whitesmoke;
         text-align: center;
-        padding-top: 50px;
+        padding-top: 20px;
         position: relative;
     }
 
@@ -294,7 +344,7 @@ figure{
  }
 
  .contact-me{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
    
 }
