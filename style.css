@@ -91,6 +91,7 @@ button:focus{
 }
 
 .container-text{
+ 
     text-align: start;
     word-wrap: break-word;
     width: 500px;
@@ -100,7 +101,6 @@ button:focus{
 }
 
 .container-text p{
-    width: 0 auto;
     display: block;
     text-align: center;
     font-size: 30px;
@@ -110,7 +110,8 @@ button:focus{
 
 .projects{
     background-color: #00203FFF;
-    min-height: 120vh;
+    height: auto;
+    min-height: 100vh !important;
     overflow: auto;
     font-family: "Lato", sans-serif;
     margin: 0 auto;
@@ -118,42 +119,25 @@ button:focus{
     text-align: center;
 }
 
-.contact{
-    margin: 0 auto;
-    font-family: "Lato", sans-serif;
-    display: block;
-    text-align: center;
-    height: 40vh !important;
-    background-color: rgb(0, 54, 63);
+.container-grid{
+    display: flex;
+    margin-top: 60px;
 }
 
-
-
-h1{
-    font-size: 50px;
-    color: whitesmoke;
-    text-align: center;
-    padding-top: 60px;
-    position: relative;
-}
 
 
 /* new projects */
 .grid {
     display: grid;
     height: 100;
-    place-self: center;
-    margin-left: 250px;
-    margin-right: auto;
-    margin-top: 50px;
-    width: 15rem;
+    margin: 0 auto;
+    width: 1100px;
     grid-gap: 6rem;
     grid-template-columns: repeat(4, minmax(15rem, 1fr));
     align-items: start;
   }
   
   .grid-item {
-    
     background-color: #F2F3F4;
     border-radius: 0.4rem;
     overflow: hidden;
@@ -247,6 +231,25 @@ h1{
     margin-bottom: 0px;
 }
 
+.contact{
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    display: block;
+    text-align: center;
+    height: 40vh !important;
+    background-color: rgb(0, 54, 63);
+}
+
+
+
+h1{
+    font-size: 50px;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+}
+
 
 
 /* Animation */
@@ -276,6 +279,27 @@ h1{
 }
 
 
+@media only screen and (max-width: 1300px) {
+    
+  
+    .grid {
+       
+        width: 500px;
+        grid-gap: 3rem;
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+      }
+
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .grid {
+        width: 200px;
+        grid-template-columns: repeat(1, minmax(15rem, 1fr));
+      }
+  }
+
+
 
 @media only screen and (max-width: 768px){
 
@@ -286,6 +310,13 @@ h1{
         border-radius: 50%;
         vertical-align: top;
     }
+
+    .container-text{
+
+        width: 300px;
+
+    }
+
     .container-text p{
         width: auto;
         display: block;
@@ -302,7 +333,7 @@ h1{
         font-size: 24px;
         color: whitesmoke;
         text-align: center;
-        padding-top: 20px;
+        padding-top: 30px;
         position: relative;
     }
 
@@ -317,6 +348,14 @@ h1{
         grid-gap: 6rem;
         grid-template-columns: repeat(1, minmax(10rem, 1fr));
         align-items: start;
+      }
+
+      .grid-item:last-child {
+        margin-bottom: 50px;
+      }
+
+      .grid-item:first-child {
+        margin-top: -50px;
       }
       
 
@@ -363,18 +402,18 @@ h1{
         font-size: 40px;
     }
 
-    figure{
-        margin-bottom: 50px;
-    }
+            figure{
+                margin-bottom: 50px;
+            }
 
-figure{
-    border-top: none;
-     display: table;
-     margin-left: 0px;
- }
+        figure{
+            border-top: none;
+            display: table;
+            margin-left: 0px;
+        }
 
- .contact-me{
-    margin-bottom: 5px;
-}
+        .contact-me{
+            margin-bottom: 5px;
+        }
    
 }
