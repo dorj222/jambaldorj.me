@@ -76,14 +76,17 @@ button:focus{
 
 .about{
     background-color: #ADEFD1FF;
+    margin: 0 auto;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-
-
 
 #my-photo{
     padding:3px;
-    margin: 80px;
-    height: 27%;
+    margin: 40px;
+    height: 40%;
     width: 0 auto;
     border: 5px dashed var(--primary-color);
     border-radius: 50%;
@@ -91,11 +94,9 @@ button:focus{
 }
 
 .container-text{
- 
     text-align: start;
     word-wrap: break-word;
     width: 500px;
-    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -103,7 +104,7 @@ button:focus{
 .container-text p{
     display: block;
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     word-wrap: break-word;
 }
 
@@ -115,24 +116,24 @@ button:focus{
     overflow: auto;
     font-family: "Lato", sans-serif;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 .container-grid{
-    display: flex;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-
-
-/* new projects */
+/* selected projects */
 .grid {
     display: grid;
     height: 100;
     margin: 0 auto;
-    width: 1100px;
-    grid-gap: 6rem;
+    grid-gap: 3rem;
     grid-template-columns: repeat(4, minmax(15rem, 1fr));
     align-items: start;
   }
@@ -144,6 +145,7 @@ button:focus{
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.2s;
+    width: 220px;
   }
   
   .grid-item:hover {
@@ -155,7 +157,7 @@ button:focus{
     border-bottom: 3px solid black;
     display: block;
     width: 100%;
-    height: 15rem;
+    height: 12rem;
     object-fit: cover;
   }
   
@@ -171,10 +173,11 @@ button:focus{
   }
   
   .card-text {
-    font-size: 1rem;
+    font-size: 0.6rem;
     letter-spacing: 0.1rem;
-    line-height: 1.5;
+    line-height: 1;
     color: #3d3d3d;
+    text-align: start;
     margin-bottom: 1rem;
   }
   
@@ -182,7 +185,7 @@ button:focus{
     display: block;
     width: 100%;
     padding: 0.7rem;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     text-align: center;
     color: #3363ff;
     background-color: #d8e0fd;
@@ -191,6 +194,7 @@ button:focus{
     transition: 0.2s;
     cursor: pointer;
     letter-spacing: 0.1rem;
+    margin-bottom: 10px;
   }
   
   .card-btn span {
@@ -208,49 +212,27 @@ button:focus{
     margin-left: 1.5rem;
   }
   
-
-
-
 /* Contact me */
 
-#contact-me{
-
-    font-size: 50px;
-    margin-bottom: 0px;
-}
-
 .contact-links{
-
-    font-size: 60px;
+    font-size: 45px;
     color:rgba(255,255,255,0.5);
-    margin-left: 20px;
-    margin-bottom: 0px;
-}
-
-.contact-me{
     margin-bottom: 0px;
 }
 
 .contact{
     margin: 0 auto;
     font-family: "Lato", sans-serif;
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    height: 40vh !important;
+    height: 15vh !important;
     background-color: rgb(0, 54, 63);
 }
 
-
-
-h1{
-    font-size: 50px;
+h1, h2{
     color: whitesmoke;
-    text-align: center;
-    padding-top: 80px;
-    position: relative;
 }
-
-
 
 /* Animation */
 
@@ -280,21 +262,16 @@ h1{
 
 
 @media only screen and (max-width: 1300px) {
-    
-  
-    .grid {
-       
-        width: 500px;
-        grid-gap: 3rem;
+    .grid {   
+        /* width: 500px; */
+        /* grid-gap: 3rem; */
         grid-template-columns: repeat(2, minmax(15rem, 1fr));
       }
-
   }
 
   @media only screen and (max-width: 900px) {
-
     .grid {
-        width: 200px;
+        /* width: 200px; */
         grid-template-columns: repeat(1, minmax(15rem, 1fr));
       }
   }
@@ -303,117 +280,73 @@ h1{
 
 @media only screen and (max-width: 768px){
 
+    
+    
+    .about{
+        height: 45vh;
+    }
+
     #my-photo{
-        height: 25% important!;
-        width: auto;
-        border: 2px dashed var(--primary-color);
-        border-radius: 50%;
-        vertical-align: top;
+        margin: 15px;
+        height: 50%;
+        width: 0 auto;
     }
 
     .container-text{
-
         width: 300px;
-
     }
 
     .container-text p{
         width: auto;
-        display: block;
-        text-align: center;
-        word-wrap: break-word;
         font-size: 14px;
     }
 
     .container-images img{
-        height: 100px;
         width: auto;
     }
+
     .projects h1{
         font-size: 24px;
-        color: whitesmoke;
-        text-align: center;
         padding-top: 30px;
-        position: relative;
     }
 
     .grid {
-        display: grid;
-        height: 100;
-        place-self: center;
+        grid-template-columns: repeat(1, minmax(10rem, 1fr));
+      }
+
+      .grid-item{
         margin-left: auto;
         margin-right: auto;
-        margin-top: 50px;
-        width: 10rem;
-        grid-gap: 6rem;
-        grid-template-columns: repeat(1, minmax(10rem, 1fr));
-        align-items: start;
+        width: 180px;
       }
 
       .grid-item:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
       }
-
-      .grid-item:first-child {
-        margin-top: -50px;
-      }
-      
 
       .card-img {
         border-bottom: 1px solid black;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 10rem;
-        object-fit: cover;
+        height: 9rem;
       }
-      
-      .card-content {
-        padding: 1rem;
-      }
-      
-  
-      
+          
       .card-text {
-        font-size: 0.7rem;
-        letter-spacing: 0.1rem;
-        line-height: 1;
-        color: #3d3d3d;
-        margin-bottom: 1rem;
+        font-size: 0.5rem;
       }
       
       .card-btn {
-        display: block;
-        width: 100%;
         padding: 0.3rem;
         font-size: 0.6rem;
-        text-align: center;
-        color: #3363ff;
-        background-color: #d8e0fd;
-        border: none;
-        border-radius: 0.4rem;
-        transition: 0.2s;
-        cursor: pointer;
-        letter-spacing: 0.1rem;
       }
     
     .contact-links{
-        font-size: 40px;
+        font-size: 36px;
     }
 
-            figure{
-                margin-bottom: 50px;
-            }
+    #contact-me{
+        font-size: large;
+    }
 
-        figure{
-            border-top: none;
-            display: table;
-            margin-left: 0px;
-        }
-
-        .contact-me{
-            margin-bottom: 5px;
-        }
-   
+    .contact{
+        height: 14vh !important;
+    }
 }
