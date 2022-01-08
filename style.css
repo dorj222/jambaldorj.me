@@ -108,7 +108,6 @@ button:focus{
     word-wrap: break-word;
 }
 
-
 .projects{
     background-color: #00203FFF;
     height: auto;
@@ -123,18 +122,21 @@ button:focus{
     text-align: center;
 }
 
-.container-grid{
-    margin-top: 30px;
-    margin-bottom: 30px;
+.title-selected-projects{
+    margin-top: 20px;
+    height: 70px;
 }
 
 /* selected projects */
 .grid {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     height: 100;
     margin: 0 auto;
-    grid-gap: 3rem;
-    grid-template-columns: repeat(4, minmax(15rem, 1fr));
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 25px;
+    /* grid-template-columns: repeat(5, minmax(15rem, 1fr)); */
     align-items: start;
   }
   
@@ -173,8 +175,8 @@ button:focus{
   }
   
   .card-text {
-    font-size: 0.6rem;
-    letter-spacing: 0.1rem;
+    font-size: 0.65rem;
+    /* letter-spacing: 0.1rem; */
     line-height: 1;
     color: #3d3d3d;
     text-align: start;
@@ -211,6 +213,7 @@ button:focus{
   .card-btn:active span {
     margin-left: 1.5rem;
   }
+
   
 /* Contact me */
 
@@ -260,28 +263,8 @@ h1, h2{
     }
 }
 
-
-@media only screen and (max-width: 1300px) {
-    .grid {   
-        /* width: 500px; */
-        /* grid-gap: 3rem; */
-        grid-template-columns: repeat(2, minmax(15rem, 1fr));
-      }
-  }
-
-  @media only screen and (max-width: 900px) {
-    .grid {
-        /* width: 200px; */
-        grid-template-columns: repeat(1, minmax(15rem, 1fr));
-      }
-  }
-
-
-
 @media only screen and (max-width: 768px){
 
-    
-    
     .about{
         height: 45vh;
     }
@@ -311,7 +294,8 @@ h1, h2{
     }
 
     .grid {
-        grid-template-columns: repeat(1, minmax(10rem, 1fr));
+        flex-wrap: nowrap;
+        flex-direction: column;
       }
 
       .grid-item{
