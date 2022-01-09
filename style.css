@@ -51,6 +51,7 @@ header{
 }
 
 a{
+
     text-decoration: none;
 }
 
@@ -63,6 +64,9 @@ header .anchorLinks{
     color: rgba(255,255,255,0.5);
 }
 
+header .anchorLinks:hover{
+    color: white;
+}
 
 .buttonHover{
     color: white;
@@ -247,7 +251,6 @@ h1, h2{
 
 /* typewriter CSS effect */
 @keyframes typewriter{
-
     from{
         width: 0;
     }
@@ -266,23 +269,21 @@ h1, h2{
 }
 
 /* glitch effect */
-
 .glitch{
-    animation: glitch 1s linear infinite;
+    animation: glitch 1s ease-in-out infinite;
   }
   
 @keyframes glitch{
     2%,64%{
-      transform: translate(1px,0) skew(0deg);
+      transform: translate(1px,0) skew(2deg);
     }
     4%,60%{
-      transform: translate(-1px,0) skew(0deg);
+      transform: translate(-1px,0) skew(2deg);
     }
     62%{
-      transform: translate(0,0) skew(5deg); 
+      transform: translate(0,0) skew(15deg); 
     }
   }
-  
   div:before,
   div:after{
     content: attr(title);
@@ -326,9 +327,7 @@ h1, h2{
     }
   }
 
-
 @media only screen and (max-width: 768px){
-
     .about{
         height: 45vh;
     }
